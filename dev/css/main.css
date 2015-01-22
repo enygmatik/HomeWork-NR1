@@ -645,6 +645,7 @@ textarea {
 
 .btn_default {
   position: relative;
+  color: #fff;
   top: 0;
   width: 139px;
   height: 31px;
@@ -665,6 +666,7 @@ textarea {
     box-shadow: 0px -3px 0px #3595ab; }
 
 .btn_disable {
+  color: #fff;
   position: relative;
   top: 0;
   width: 139px;
@@ -863,20 +865,16 @@ textarea {
     z-index: 99; }
 
   .menu_btn {
-    display: inline-block; }
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    float: right;
+    right: 20px; }
 
   .general_info, .work_practic, .studies, .contact_wrapper, .my_works, .social {
     display: inline-block;
-    float: none; }
-
-  .menu_btn {
-    display: inline-block;
-    float: right; } }
+    float: none; } }
 @media (max-width: 768px) {
-  .menu_btn {
-    float: right !important;
-    margin-right: 20px; }
-
   .about_me, .job, .studies_level {
     font-size: 17px !important;
     line-height: 22px;
@@ -932,15 +930,19 @@ textarea {
     max-width: 0 !important;
     max-height: 0 !important; }
 
-  .menu_btn {
-    text-align: center; }
-
   .icon-menu {
     font-size: 40px;
     line-height: 60px; } }
 @media (max-width: 452px) {
   #footer {
     padding-top: 10px;
-    line-height: 18px; } }
+    line-height: 18px; }
+
+  .btn_default, .btn_disable {
+    width: 100%;
+    font-size: 13px; }
+
+  .modal-title {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=main.css.map */

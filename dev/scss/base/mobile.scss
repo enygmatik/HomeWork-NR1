@@ -83,24 +83,19 @@
     z-index: 99;
   }
   .menu_btn{
+    position: absolute;
+    top: 0;
     display: inline-block;
+    float: right;
+    right: 20px;
   }
   .general_info, .work_practic, .studies, .contact_wrapper, .my_works, .social {
     display: inline-block;
     float: none;
   }
-
-  .menu_btn {
-    display: inline-block;
-    float: right;
-  }
 }
 
 @media (max-width:768px) {
-  .menu_btn {
-    float: right !important;
-    margin-right: 20px;
-  }
   .about_me, .job, .studies_level{
     font-size: 17px !important;
     line-height: 22px;
@@ -167,9 +162,6 @@
     max-width: 0 !important;
     max-height: 0 !important;
   }
-  .menu_btn {
-    text-align: center;
-  }
   .icon-menu {
     font-size: 40px;
     line-height: 60px;
@@ -182,9 +174,11 @@
     padding-top: 10px;
     line-height: 18px;
   }
-}
-
-
-@media (min-width: 768px) {
-
+  .btn_default, .btn_disable {
+    width: 100%;
+    font-size: 13px;
+  }
+  .modal-title {
+    font-size: 20px;
+  }
 }
