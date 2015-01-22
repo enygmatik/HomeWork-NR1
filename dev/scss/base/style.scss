@@ -210,48 +210,56 @@ border-radius: 5px;
 .nav {
   list-style: none;
   color: #fff;
-
-  & > li {
-    color: #1C667A;
-    text-align: left;
-    position: relative;
-    padding: 30px 10px 0 10px;
-    height: 72px;
-    width: 100%;
-
-    & > a {
-      position: relative;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      padding-left: 10px;
-      transition: border-width 0.5s;
-
-    }
-    & > a:hover {
-      border-bottom: 2px solid $element_color;
-    }
-  }
 }
 .nav_items {
   color: $font_color_2;
-  &:hover {
-    color: $element_color;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: border-width 0.5s;
+  & span {
+    display: block;
+    margin: 0 10px 0 10px;
+    padding: 30px 10px 15px 10px;
+
+    &:hover {
+      color: $color;
+      border-bottom: 2px solid $menu_item;
+    }
   }
 }
 
-.menu_item:first-child {
-  border-radius: 5px 5px 0 0;
+
+.menu_item {
+  color: #1C667A;
+  text-align: left;
+  position: relative;
+  height: 72px;
+  width: 100%;
+
+  &:first-child a {
+    border-radius: 5px 5px 0 0 ;
+  }
+  &:last-child a {
+    border-radius: 0 0 5px 5px ;
+  }
 }
 
-.menu_item:last-child {
-  border-radius: 0 0 5px 5px;
-}
+//.menu_item:first-child a {
+//  border-radius: 5px 5px 0 0;
+//}
+
+//.menu_item:last-child a {
+//  border-radius: 0 0 5px 5px;
+//}
+
 
 .active {
   color: #fff;
   background-color:$menu_item;
 }
+
 
 .menu_btn {
   display: none;

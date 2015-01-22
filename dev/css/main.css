@@ -185,33 +185,32 @@ section {
 .nav {
   list-style: none;
   color: #fff; }
-  .nav > li {
-    color: #1C667A;
-    text-align: left;
-    position: relative;
-    padding: 30px 10px 0 10px;
-    height: 72px;
-    width: 100%; }
-    .nav > li > a {
-      position: relative;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      padding-left: 10px;
-      transition: border-width 0.5s; }
-    .nav > li > a:hover {
-      border-bottom: 2px solid #74d5e8; }
 
 .nav_items {
-  color: #58697a; }
-  .nav_items:hover {
-    color: #74d5e8; }
+  color: #58697a;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: border-width 0.5s; }
+  .nav_items span {
+    display: block;
+    margin: 0 10px 0 10px;
+    padding: 30px 10px 15px 10px; }
+    .nav_items span:hover {
+      color: #65707b;
+      border-bottom: 2px solid #3ba8c0; }
 
-.menu_item:first-child {
-  border-radius: 5px 5px 0 0; }
-
-.menu_item:last-child {
-  border-radius: 0 0 5px 5px; }
+.menu_item {
+  color: #1C667A;
+  text-align: left;
+  position: relative;
+  height: 72px;
+  width: 100%; }
+  .menu_item:first-child a {
+    border-radius: 5px 5px 0 0; }
+  .menu_item:last-child a {
+    border-radius: 0 0 5px 5px; }
 
 .active {
   color: #fff;
@@ -805,24 +804,43 @@ textarea {
     font-weight: 100;
     font-size: 16px;
     font-family: fira_sansbook; }
+    .menu:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #3ba8c0; }
 
   .nav {
     list-style: none;
     color: #fff; }
-    .nav > li {
-      color: #1C667A;
-      text-align: center;
-      position: relative;
-      padding: 15px 10px 0 10px;
-      height: 40px;
-      width: 100%; }
-      .nav > li > a {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        padding-left: 0; }
-      .nav > li > a:hover {
+
+  .nav_items {
+    text-align: center;
+    color: #58697a;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: border-width 0.5s; }
+    .nav_items span {
+      display: inline-block;
+      margin: 0 10px 0 10px;
+      padding: 15px 0 0 0; }
+      .nav_items span:hover {
+        color: #65707b;
         border-bottom: 0; }
+
+  .menu_item {
+    color: #1C667A;
+    text-align: left;
+    position: relative;
+    height: 40px;
+    width: 100%; }
+    .menu_item:first-child a {
+      border-radius: 0; }
+    .menu_item:last-child a {
+      border-radius: 0; }
 
   .contact_bar {
     display: none !important; }
