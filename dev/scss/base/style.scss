@@ -204,43 +204,52 @@ border-radius: 5px;
   font-size: 20px;
   font-family: fira_sansbook;
   margin-bottom: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .nav {
   list-style: none;
   color: #fff;
-  border-radius: 5px;
+
   & > li {
-    position: relative;
-    width: 100%;
-    height: 72px;
-    color: #fff !important;
+    color: #1C667A;
     text-align: left;
+    position: relative;
+    padding: 30px 10px 0 10px;
+    height: 72px;
+    width: 100%;
+
+    & > a {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding-left: 5px;
+      transition: border-width 0.5s;
+
+    }
+    & > a:hover {
+      border-bottom: 2px solid $element_color;
+    }
   }
-  &:first-child {
-    border-radius: 5px 5px 0 0 !important;
-  }
-  &:last-child {
-    border-radius: 0 0 5px 5px !important;
+}
+.nav_items {
+  color: $font_color_2;
+  &:hover {
+    color: $element_color;
   }
 }
 
-.nav_items {
-  position: relative;
-  left: 0;
-  display: inline-block;
-  padding: 27px 10px 0 10px;
-  width: 100%;
-  height: 100%;
-  color: $font_color_2;
-  &:hover {
-    color: $menu_item;
-    border-bottom: 2px solid $menu_item;
-  }
+.menu_item:first-child {
+  border-radius: 5px 5px 0 0;
 }
+
+.menu_item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
 .active {
-  color: #fff !important;
+  color: #fff;
   background-color:$menu_item;
 }
 

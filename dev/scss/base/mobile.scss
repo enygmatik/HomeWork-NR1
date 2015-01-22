@@ -61,9 +61,9 @@
     max-height: 200px !important;
     background-color: #262626;
     transition: top 0.5s ease;
-    -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
+    -webkit-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
+    box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
     z-index: 99;
   }
   .menu_btn{
@@ -73,6 +73,7 @@
     display: inline-block;
     float: none;
   }
+
   .menu_btn {
     display: inline-block;
     float: right;
