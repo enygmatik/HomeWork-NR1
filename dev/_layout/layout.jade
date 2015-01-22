@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-enquiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="")
+        meta(name="author" content="John Manoil")
+
+        title Ivan Manoil
+        link(rel="stylesheet" href="css/framework/bootstrap.min.css")
+        link(rel="stylesheet" href="css/main.css")
+    body
+        div.wrapper
+            div#header
+                div.brand-logo.col-xs-4
+                    a(href='index.html').logo LoftSchool
+                    div.logo_text комплексное обучение web разработке
+
+                div.social.col-xs-5
+                    div.social_box
+                        ul.social_items
+                            li: a(href='#' title='vk').social_link
+                                i.icon-vkontakte
+                            li: a(href='#' title='facebook').social_link
+                                i.icon-facebook
+                            li: a(href='#' title='twitter').social_link
+                                i.icon-twitter
+                            li: a(href='#' title='github').social_link
+                                i.icon-github-1
+
+                div.menu_btn.col-xs-2
+                    i.icon-menu
+
+            block content
+            block portfolio
+
+            //contact me
+            block contact_me
+
+        div#footer.container
+            div.row
+                div.col-sm-12
+                        span © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+        //javascript
+
+        script(src="//code.jquery.com/jquery-1.11.2.min.js")
+        script window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js">')
+        script(src='js/vendor/bootstrap.min.js')
+        script(src='js/main.js')
+
+
