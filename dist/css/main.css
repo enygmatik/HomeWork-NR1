@@ -97,10 +97,24 @@ section {
   text-align: center; }
 
 #header {
+  display: block;
+  position: relative;
   min-height: 115px;
+  height: 115px;
   width: 100%;
-  background-color: #eff3f7;
-  overflow: hidden; }
+  background-color: #eff3f7; }
+  #header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #1C667A;
+    background-image: -moz-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+    background-image: -o-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+    background-image: -webkit-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+    background-image: linear-gradient(to right, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%); }
 
 .content {
   display: inline-block;
@@ -180,37 +194,40 @@ section {
   font-size: 20px;
   font-family: fira_sansbook;
   margin-bottom: 30px;
-  padding-bottom: 10px; }
+  padding-bottom: 5px; }
 
 .nav {
   list-style: none;
-  color: #fff;
-  border-radius: 5px; }
-  .nav > li {
-    position: relative;
-    width: 100%;
-    height: 72px;
-    color: #fff !important;
-    text-align: left; }
-  .nav:first-child {
-    border-radius: 5px 5px 0 0 !important; }
-  .nav:last-child {
-    border-radius: 0 0 5px 5px !important; }
+  color: #fff; }
 
 .nav_items {
+  color: #58697a;
   position: relative;
-  left: 0;
   display: inline-block;
-  padding: 27px 10px 0 10px;
-  width: 100%;
   height: 100%;
-  color: #58697a; }
-  .nav_items:hover {
-    color: #3ba8c0;
-    border-bottom: 2px solid #3ba8c0; }
+  width: 100%;
+  transition: border-width 0.5s; }
+  .nav_items span {
+    display: block;
+    margin: 0 10px 0 10px;
+    padding: 30px 10px 15px 10px; }
+    .nav_items span:hover {
+      color: #65707b;
+      border-bottom: 2px solid #3ba8c0; }
+
+.menu_item {
+  color: #1C667A;
+  text-align: left;
+  position: relative;
+  height: 72px;
+  width: 100%; }
+  .menu_item:first-child a {
+    border-radius: 5px 5px 0 0; }
+  .menu_item:last-child a {
+    border-radius: 0 0 5px 5px; }
 
 .active {
-  color: #fff !important;
+  color: #fff;
   background-color: #3ba8c0; }
 
 .menu_btn {
@@ -441,6 +458,16 @@ section {
   font-size: 13px;
   font-family: fira_sanslight;
   line-height: 55px; }
+  #footer:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1C667A;
+    background-image: -moz-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+    background-image: -o-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+    background-image: -webkit-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
+    background-image: linear-gradient(to right, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%); }
 
 .my_works {
   float: right;
@@ -642,6 +669,7 @@ textarea {
 
 .btn_default {
   position: relative;
+  color: #fff;
   top: 0;
   width: 139px;
   height: 31px;
@@ -662,6 +690,7 @@ textarea {
     box-shadow: 0px -3px 0px #3595ab; }
 
 .btn_disable {
+  color: #fff;
   position: relative;
   top: 0;
   width: 139px;
@@ -803,30 +832,35 @@ textarea {
     font-family: fira_sansbook; }
 
   .nav {
-    box-sizing: content-box;
-    display: inline-block;
     list-style: none;
-    width: 100%; }
-    .nav > li {
-      position: relative;
-      width: 100%;
-      height: 60px;
-      border-radius: 0;
-      color: #fff;
-      text-align: left; }
+    color: #fff; }
 
   .nav_items {
-    padding: 20px 15px 20px 15px;
     text-align: center;
+    color: #58697a;
     position: relative;
-    left: 0;
     display: inline-block;
-    width: 100%;
     height: 100%;
-    border-radius: 0;
-    color: #58697a; }
-    .nav_items:hover {
-      border: 0; }
+    width: 100%;
+    transition: border-width 0.5s; }
+    .nav_items span {
+      display: inline-block;
+      margin: 0 10px 0 10px;
+      padding: 15px 0 0 0; }
+      .nav_items span:hover {
+        color: #65707b;
+        border-bottom: 0; }
+
+  .menu_item {
+    color: #1C667A;
+    text-align: left;
+    position: relative;
+    height: 40px;
+    width: 100%; }
+    .menu_item:first-child a {
+      border-radius: 0; }
+    .menu_item:last-child a {
+      border-radius: 0; }
 
   .contact_bar {
     display: none !important; }
@@ -843,26 +877,22 @@ textarea {
     max-height: 200px !important;
     background-color: #262626;
     transition: top 0.5s ease;
-    -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
+    -webkit-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
+    box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
     z-index: 99; }
 
   .menu_btn {
-    display: inline-block; }
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    float: right;
+    right: 20px; }
 
   .general_info, .work_practic, .studies, .contact_wrapper, .my_works, .social {
     display: inline-block;
-    float: none; }
-
-  .menu_btn {
-    display: inline-block;
-    float: right; } }
+    float: none; } }
 @media (max-width: 768px) {
-  .menu_btn {
-    float: right !important;
-    margin-right: 20px; }
-
   .about_me, .job, .studies_level {
     font-size: 17px !important;
     line-height: 22px;
@@ -918,15 +948,22 @@ textarea {
     max-width: 0 !important;
     max-height: 0 !important; }
 
-  .menu_btn {
-    text-align: center; }
-
   .icon-menu {
     font-size: 40px;
     line-height: 60px; } }
 @media (max-width: 452px) {
   #footer {
-    padding-top: 10px;
-    line-height: 18px; } }
+    line-height: 18px; }
+    #footer span {
+      display: block;
+      height: 100%;
+      padding-top: 10px; }
+
+  .btn_default, .btn_disable {
+    width: 100%;
+    font-size: 13px; }
+
+  .modal-title {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
