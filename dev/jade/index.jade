@@ -3,64 +3,67 @@ block content
         div.content
             div.container-fluid
                 div.row
-                    div.col-sm-12
                         div.col-sm-3.left_side_bar
                             include ../_layout/_menu
                             div.container-fluid.contact_bar
                                 div.row
                                     include  ../_layout/_contact_bar_desktop
-                        div.general_info.col-sm-9
+                        div.box.col-sm-9
                             div.row
                                 div.section_header.col-sm-12
-                                    span Основная информация
+                                    h2.h2 Основная информация
                                 div.col-sm-12
                                     div.profile_img_box.col-sm-4
                                         img(src='img/me2.jpg' alt='profile').profile_img
                                     div.about_me.col-sm-8
-                                        div: p.bold Меня зовут:
-                                            span  Ivan Manoil
-                                        div: p.bold Мой возраст:
-                                            span  23 лет
-                                        div: p.bold Мой город:
-                                            span  Chisinau, MD
-                                        div: p.bold Моя специализация:
-                                            span  FRONTEND разработчик
-                                        div: p.bold Ключевые навыки:
-                                            span.skill  html
-                                            span.skill  css
-                                            span.skill  javascript
-                                            span.skill  gulp
-                                            span.skill  git
 
-                        div.work_practic.col-sm-9
+                                        p.about_info: | <strong> Меня зовут:</strong>
+                                            span.about_info_span Ivan Manoil.
+
+                                        p.about_info: | <strong>Мой возраст:</strong>
+                                            span.about_info_span 23 лет.
+
+                                        p.about_info: | <strong>Мой город:</strong>
+                                            span.about_info_span Chisinau, MD.
+
+                                        p.about_info: | <strong>Моя специализация:</strong>
+                                            span.about_info_span FRONTEND разработчик.
+
+                                        ul.skill_list <strong>Ключевые навыки:</strong>
+                                            li.skill html
+                                            li.skill css
+                                            li.skill javascrip
+                                            li.skill gulp
+                                            li.skill git
+
+                        div.box.col-sm-9
                             div.row
                                 div.section_header.col-sm-12
-                                    span Опыт работы
+                                    h2.h2 Опыт работы
                             div.row
-                                div.col-sm-12.job
+                                div.col-sm-12.inside_box
                                     div.col-sm-2.icon_work: i.icon-briefcase
                                     div.col-sm-10
-                                        p: b "ИП Боровицкий" - Продавец дисков
-                                        p Сентябрь 2005 - Август 2008
-                                div.col-sm-12.job
+                                        p.p: b "ИП Боровицкий" - Продавец дисков
+                                        p.p Сентябрь 2005 - Август 2008
+                                div.col-sm-12.inside_box
                                     div.col-sm-2.icon_work: i.icon-briefcase
                                     div.col-sm-10
-                                        p: b "ООО Системы безопастности" - Системный администратор
-                                        p Июнь 2008 - Июль 2010
+                                        p.p: b "ООО Системы безопастности" - Системный администратор
+                                        p.p Июнь 2008 - Июль 2010
 
-                        div.studies.col-sm-9
+                        div.box.col-sm-9
                             div.row
                                 div.section_header.col-sm-12
-                                    span Образование
+                                    h2.h2 Образование
                             div.row
-                                div.col-sm-12.studies_level
+                                div.col-sm-12.inside_box
                                     div.col-sm-2.icon_studies: i.icon-graduation-cap
                                     div.col-sm-10
-                                        p Незаконченное высшее. СПБГУ ИТМО
-                                        p.thin Октябрь 2012 - по настоящее время
-                                div.col-sm-12.studies_level
+                                        p.p Незаконченное высшее. СПБГУ ИТМО
+                                        p.p.thin Октябрь 2012 - по настоящее время
+                                div.col-sm-12.inside_box
                                     div.col-sm-2.icon_studies: i.icon-doc-text
                                     div.col-sm-10
-                                        p Курсы Loftschool.ru
-                                        p.thin Ноябрь 2014 - по настоящее время
-
+                                        p.p Курсы Loftschool.ru
+                                        p.p.thin Ноябрь 2014 - по настоящее время

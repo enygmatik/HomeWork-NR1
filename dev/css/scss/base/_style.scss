@@ -1,34 +1,5 @@
-@import "../fonts/fira/fira.css";
-@import "../fonts/icons/fontello.css";
-@font-face {
-  font-family: 'HelveticaNeueCyr Bold';
-  src: url('../fonts/helveticaneuecyr-bold-webfont.eot');
-  src: url('../fonts/helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'),
-  url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff'),
-  url('../fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype'),
-  url('../fonts/helveticaneuecyr-bold-webfont.svg#helveticaneuecyrbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'helveticaneuecyrthin';
-  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
-  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/helveticaneuecyr-thin-webfont.woff2') format('woff2'),
-  url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'),
-  url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype'),
-  url('../fonts/helveticaneuecyr-thin-webfont.svg#helveticaneuecyrthin') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@import "../tools/fonts";
 @import "../tools/tools";
-
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,7 +18,6 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -203,7 +173,6 @@ border-radius: 5px;
   text-align: center;
   font-size: 16px;
   line-height: 40px;
-
   &:hover {
     color: $element_color;
     background-color: $element_color;
@@ -227,25 +196,6 @@ border-radius: 5px;
   list-style: none;
   color: #fff;
 }
-.nav_items {
-  color: $font_color_2;
-  position: relative;
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  transition: border-width 0.5s;
-  & span {
-    display: block;
-    margin: 0 10px 0 10px;
-    padding: 30px 10px 15px 10px;
-
-    &:hover {
-      color: $color;
-      border-bottom: 2px solid $menu_item;
-    }
-  }
-}
-
 
 .menu_item {
   color: #1C667A;
@@ -253,7 +203,6 @@ border-radius: 5px;
   position: relative;
   height: 72px;
   width: 100%;
-
   &:first-child a {
     border-radius: 5px 5px 0 0 ;
   }
@@ -261,12 +210,23 @@ border-radius: 5px;
     border-radius: 0 0 5px 5px ;
   }
 }
+.nav_items {
+  color: $font_color_2;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: border-width 0.5s;
+  padding: 30px 10px 10px 10px ;
+}
 
+.border_b {
+  border-bottom: 2px solid $menu_item;
+}
 .active {
   color: #fff;
   background-color:$menu_item;
 }
-
 
 .menu_btn {
   display: none;
@@ -284,18 +244,6 @@ border-radius: 5px;
   line-height: 115px;
 }
 
-.divider {
-  max-width: 768px;
-  width: 100%;
-  padding: 0 !important;
-  margin: 0 !important;
-  height: 2px;
-  background-color: #1C667A;
-  background-image: -moz-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
-  background-image: -o-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
-  background-image: -webkit-linear-gradient(left, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
-  background-image: linear-gradient(to right, rgba(28, 102, 122, 0.9) 0%, rgba(246, 250, 254, 0.9) 0%, rgba(216, 216, 216, 0.9) 0%, rgba(242, 246, 250, 0.9) 0%, rgba(28, 102, 122, 0.9) 48%, rgba(242, 246, 250, 0.9) 100%);
-}
 //CONTENT STYLES
 
 .collapsed {
@@ -333,9 +281,10 @@ border-radius: 5px;
   text-align: center;
 }
 
-.general_info {
+.box {
   float: right;
   min-height: 260px;
+  border-radius: 5px;
   height: auto;
   max-width: 650px;
   width: 100%;
@@ -365,77 +314,73 @@ border-radius: 5px;
   min-height: 75px;
   text-align:left;
 
-  & > span {
-    line-height: 75px;
+  & > .h2 {
+    display: inline-block;
+    height: 50px;
     border-bottom: 2px solid $element_color;
     color: $element_color;
     font-size: 27px;
     font-family: 'fira_sansbook';
-    padding-left: 25px;
+    padding: 0 10px 0 25px;
   }
 }
 
 .about_me {
   font-size: 18px;
+  padding-bottom: 20px;
   min-height: 250px;
+  font-family: fira_sansregular;
+  line-height: 30px;
+}
 
-  & > p {
-    position: relative;
-    width: 100%;
+.about_info {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
-.bold {
-  color: $color;
-  line-height: 39px;
-  font-family: 'fira_sansmedium';
-
-  & > span {
-    color: $color;
-    line-height: 39px;
-    font-family: 'fira_sansbook';
-  }
+.about_info_span {
+  padding: 5px 5px 5px 5px ;
+  font: inherit;
+  text-transform: capitalize;
 }
 
 .skill {
-  min-height: 10px !important;
+  display: inline-block;
+  min-height: 20px !important;
   min-width: 30px !important;
+  width: auto;
+  padding: 2px;
   text-align: center !important;
   font-size: 12px !important;
-  line-height: 39px !important;
+  line-height: 20px;
   color: #fff !important;
   margin-right: 8px;
-  border-radius: 3px;
-  background: #2e8ca2; /* Old browsers */
-  background: -moz-linear-gradient(top,  #27a2a0 0%, #7db9e8 54%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#27A2A0), color-stop(54%,#7db9e8)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #27A2A0 0%,#7db9e8 54%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #27A2A0 0%,#7db9e8 54%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #27A2A0 0%,#7db9e8 54%); /* IE10+ */
-  background: linear-gradient(to bottom,  #27A2A0 0%,#7db9e8 54%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8ca2', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-  padding-right: 4px !important;
+  border-radius: 2px;
+  background: #7db9e8; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkYjllOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iIzdkYjllOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzI3YTJhMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyN2EyYTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #7db9e8 0%, #7db9e8 49%, #27a2a0 51%, #27a2a0 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7db9e8), color-stop(49%, #7db9e8), color-stop(51%, #27a2a0), color-stop(100%, #27a2a0)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #7db9e8 0%, #7db9e8 49%, #27a2a0 51%, #27a2a0 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #7db9e8 0%, #7db9e8 49%, #27a2a0 51%, #27a2a0 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #7db9e8 0%, #7db9e8 49%, #27a2a0 51%, #27a2a0 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #7db9e8 0%, #7db9e8 49%, #27a2a0 51%, #27a2a0 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#27a2a0', GradientType=0); /* IE6-8 */
+  &:first-child {
+    margin-left: 8px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.work_practic {
-  float: right;
-  margin-top: 30px;
-  min-height: 300px;
-  max-width: 650px;
-  width: 100%;
-  height: auto;
-  background-color: $base_color;
-  text-align: left;
-}
-
-.bbu {
-  background-color: #27a2a0;
-}
 .icon-briefcase {
   font-size: 40px;
 }
 
-.job, .studies_level {
+.inside_box {
   margin-top: 20px;
   color: $color;
   font-size: 19px;
@@ -446,6 +391,10 @@ border-radius: 5px;
   text-align: center;
 }
 
+.p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
 
 .studies {
   float: right;
@@ -709,25 +658,24 @@ border-radius: 5px;
 
 .message_box {
   margin-bottom: 55px;
-
-  & > textarea {
-    outline: none;
-    border: 1px solid #3BA8C0;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #FBFCFD;
-    color: #3BA8C0;
-    font-weight: 300;
-    font-size: 14px;
-    font-family: fira_sanslight;
-    padding: 10px;
-    width: 100% ;
-  }
 }
-textarea {
+
+.textarea {
+  outline: none;
+  border: 1px solid #3BA8C0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #FBFCFD;
+  color: #3BA8C0;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: fira_sanslight;
+  padding: 10px;
+  width: 100% ;
   resize: none;
 }
+
 
 .captcha_section {
     color: #58697A;
@@ -822,4 +770,44 @@ textarea {
   }
 }
 
+
+.tooltip-inner {
+  background-color: #ff4943;
+
+}
+.tooltip-arrow {
+  border-bottom-color: #FF4943 !important;
+}
+//events
+.has-succes {
+  border: 1px solid green !important;
+  background-color: rgba(32, 180, 72, 0.51);
+  color: #f3f3f3;
+  &::-webkit-input-placeholder {
+    color: #f3f3f3;
+  }
+}
+.has-error {
+  border: 1px solid #ff0000;
+  background-color: rgba(255, 73, 67, 0.51);
+  color: #f3f3f3;
+  &::-webkit-input-placeholder {
+    color: #f3f3f3;
+  }
+}
+
+.status_message_box {
+  margin-bottom: 5px;
+  text-align: center;
+  min-height: 35px;
+  padding: 10px 0 0 0;
+  font-size: 18px;
+  font-family: fira_sansbook;
+  color: #f3f3f3;
+  border-radius: 5px;
+}
+
+.test {
+  border-radius: 3px;
+}
 @import "../tools/modal";

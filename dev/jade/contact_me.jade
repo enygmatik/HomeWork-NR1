@@ -14,28 +14,30 @@ block contact_me
                                     div У вас интересный проект? Напишите мне
                                 div.form_section.col-sm-12
                                     div.form_wrapper
-                                        form(method='post' name='sentMessage' id='contactForm' action='contact.php')
-                                            div.col-sm-6.input_box
-                                                div Имя
-                                                input(type='text' name='name' placeholder='Name').input_theme
-                                            div.col-sm-6.input_box
-                                                div Email
-                                                input(type='email' name='email' placeholder='Email').input_theme
+                                        form(method='POST' name='sentMessage' id='contactForm' action='')
+                                            div.col-sm-12.status_message_box
+
+                                            div.col-sm-6.input_box.form_gr
+                                                label(for='name') Имя
+                                                input(type='text' id='name' name='name' placeholder='Name' ).input_theme
+                                            div.col-sm-6.input_box.form_gr
+                                                label(for='email2') Email
+                                                input(type='email' id='email' name='email' placeholder='Email' ).input_theme
                                             div.col-sm-12
-                                                div.message_box
-                                                    div Сообщение
-                                                    textarea(rows='13' cols='60' name='message' placeholder='message')
+                                                div.message_box.form_gr
+                                                    label(for='message') Сообщение
+                                                    textarea(id='message' rows='13' cols='60' name='message' placeholder='message' ).textarea
                                             div.captcha_section.col-sm-12
-                                                span Введите код, указанный на картинке
+                                                span.captcha_code Введите код, указанный на картинке
                                             div.col-xs-6
                                                 div.captcha_image_box
                                                     img(src='img/captcha.jpg')
                                             div.col-xs-6
-                                                div.captcha_input_box
-                                                    input(type='text' name='captcha').input_theme.input_captcha
+                                                div.captcha_input_box.form_gr
+                                                    //label(for='captcha') Captcha
+                                                    input(type='text' id='captcha' name='captcha' ).input_theme.input_captcha.input_box
                                             div.col-sm-12
                                                 div.col-xs-6.button_box
                                                     button(type='submit').btn_default Отправить
                                                 div.col-xs-6.button_box
                                                     button(type='reset').btn_disable Очистить
-

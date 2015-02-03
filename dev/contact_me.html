@@ -36,9 +36,9 @@
               <div class="left_side_bar col-sm-3">
                 <div class="menu">
                   <ul class="nav">
-                    <li class="menu_item"><a href="index.html" class="nav_items"><span class="remove_hover">Обо мне</span></a></li>
-                    <li class="menu_item"><a href="portfolio.html" class="nav_items"><span class="remove_hover">Мои работы</span></a></li>
-                    <li class="menu_item"><a href="contact_me.html" class="nav_items"><span class="remove_hover">Связаться со мной</span></a></li>
+                    <li class="menu_item"><a href="index.html" class="nav_items border_b">Обо мне</a></li>
+                    <li class="menu_item"><a href="portfolio.html" class="nav_items border_b">Мои работы</a></li>
+                    <li class="menu_item"><a href="contact_me.html" class="nav_items">Связаться со мной</a></li>
                   </ul>
                 </div>
                 <div class="contact_bar container-fluid">
@@ -79,28 +79,30 @@
                     </div>
                     <div class="form_section col-sm-12">
                       <div class="form_wrapper">
-                        <form method="post" name="sentMessage" id="contactForm" action="contact.php">
-                          <div class="col-sm-6 input_box">
-                            <div>Имя</div>
-                            <input type="text" name="name" placeholder="Name" class="input_theme">
+                        <form method="POST" name="sentMessage" id="contactForm" action="">
+                          <div class="col-sm-12 status_message_box"></div>
+                          <div class="col-sm-6 input_box form_gr">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" placeholder="Name" class="input_theme">
                           </div>
-                          <div class="col-sm-6 input_box">
-                            <div>Email</div>
-                            <input type="email" name="email" placeholder="Email" class="input_theme">
+                          <div class="col-sm-6 input_box form_gr">
+                            <label for="email2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" class="input_theme">
                           </div>
                           <div class="col-sm-12">
-                            <div class="message_box">
-                              <div>Сообщение</div>
-                              <textarea rows="13" cols="60" name="message" placeholder="message"></textarea>
+                            <div class="message_box form_gr">
+                              <label for="message">Сообщение</label>
+                              <textarea id="message" rows="13" cols="60" name="message" placeholder="message" class="textarea"></textarea>
                             </div>
                           </div>
-                          <div class="captcha_section col-sm-12"><span>Введите код, указанный на картинке</span></div>
+                          <div class="captcha_section col-sm-12"><span class="captcha_code">Введите код, указанный на картинке</span></div>
                           <div class="col-xs-6">
                             <div class="captcha_image_box"><img src="img/captcha.jpg"></div>
                           </div>
                           <div class="col-xs-6">
-                            <div class="captcha_input_box">
-                              <input type="text" name="captcha" class="input_theme input_captcha">
+                            <div class="captcha_input_box form_gr">
+                              <!--label(for='captcha') Captcha-->
+                              <input type="text" id="captcha" name="captcha" class="input_theme input_captcha input_box">
                             </div>
                           </div>
                           <div class="col-sm-12">
@@ -130,6 +132,7 @@
     <!--javascript-->
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js">')</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>

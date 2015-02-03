@@ -19,6 +19,20 @@
     list-style: none;
     color: #fff;
   }
+
+  .menu_item {
+    color: #1C667A;
+    text-align: left;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    &:first-child a {
+      border-radius:0;
+    }
+    &:last-child a {
+      border-radius:0;
+    }
+  }
   .nav_items {
     text-align: center;
     color: $font_color_2;
@@ -27,31 +41,11 @@
     height: 100%;
     width: 100%;
     transition: border-width 0.5s;
-    & span {
-      display: inline-block;
-      margin: 0 10px 0 10px;
-      padding: 15px 0 0 0;
-
-      &:hover {
-        color: $color;
-        border-bottom: 0;
-      }
-    }
+    padding:15px 10px 10px 10px ;
   }
 
-  .menu_item {
-    color: #1C667A;
-    text-align: left;
-    position: relative;
-    height: 40px;
-    width: 100%;
-
-    &:first-child a {
-      border-radius: 0;
-    }
-    &:last-child a {
-      border-radius: 0;
-    }
+  .border_b {
+    border-bottom: 0;
   }
 
   .contact_bar {
@@ -82,7 +76,7 @@
     float: right;
     right: 20px;
   }
-  .general_info, .work_practic, .studies, .contact_wrapper, .my_works, .social {
+  .box, .contact_wrapper, .my_works, .social {
     display: inline-block;
     float: none;
   }

@@ -10,7 +10,7 @@ block portfolio
                     div.col-sm-9.my_works
                         div.row
                             div.section_header.col-sm-12
-                                span Мои работы
+                                h2.h2 Мои работы
                             div.col-sm-12
                                 div.portfolio_items.col-sm-6
                                     div.about_item
@@ -23,6 +23,18 @@ block portfolio
                                     div.project_name
                                         a(href='http://metaform.me') www.metaform.me
                                     div.about_project Personal portfolio
+
+                                div.portfolio_items.col-sm-6
+                                    div.about_item
+                                        div.caption
+                                            div.caption_content
+                                                span Metaform
+
+                                        img(src='img/avatar.png').project_cover
+
+                                    div.project_name
+                                        a(href='http://metaform.me') www.metaform.me
+                                    div.about_project Personal portfolio Personal portfolio Personal portfolio Personal portfolio Personal portfolio Personal portfolio
 
                                 div(data-toggle="modal" data-target="#IDmodal_1").portfolio_items.col-sm-6
                                     div.add_item
@@ -37,15 +49,16 @@ block portfolio
                     button(type='button' data-dismiss='modal' aria-labelledby='close').btn-close-modal X
                     h4.modal-title Добавление проекта
                 div.modal-body
-                    form(method='POST' action='add_project.php' name='add_project')#add_project_form
+                    form(method='POST' action='' name='add_project')#add_project_form
                         span Название проекта
                         input(type='text' name='project_name').input_theme
 
                         span Картинка проекта
                         div.row.upload_form
-                            div.selected-files.col-xs-7
+                            input(type='text').selected-files.col-xs-7
                             div.col-xs-5
                                 button(type='button').btn_default.fake-upload#fake_upload Select image..
+
                             input(type='file').input_theme.file-upload#upload_btn
 
                         span URL проекта
