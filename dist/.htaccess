@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule /$ index.php [L]
+RewriteRule contact$ contact_me.php [L]
+RewriteRule portfolio$ portfolio.php [L]

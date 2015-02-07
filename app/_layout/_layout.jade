@@ -8,8 +8,10 @@ html(lang="en")
         meta(name="author" content="John Manoil")
 
         title Ivan Manoil
+        // build:css css/style.css
         link(rel="stylesheet" href="css/framework/bootstrap.min.css")
         link(rel="stylesheet" href="css/main.css")
+        //endbuild
     body
         div.wrapper
             div#header
@@ -41,11 +43,12 @@ html(lang="en")
         div#footer.container-fluid
             div.row
                 div.col-sm-12
-                        span © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+                        span © 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его
         //javascript
-
-        script(src="//code.jquery.com/jquery-1.11.2.min.js")
+        script(src="http://code.jquery.com/jquery-1.11.2.min.js")
         script window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js">')
-        script(src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js")
+
+        // build:js js/core.js
         script(src='js/vendor/bootstrap.min.js')
         script(src='js/main.js')
+        //endbuild

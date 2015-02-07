@@ -1,0 +1,41 @@
+extends ../_layout/_layout
+block contact_me
+    div.content
+        div.container-fluid
+            div.row
+                div.left_side_bar.col-sm-3
+                    include ../_layout/_menu
+                    include ../_layout/_contact_bar_desktop
+                div.contact_wrapper.col-sm-9
+                    div.container-fluid
+                        div.row
+                            div.form_header.col-sm-12
+                                div У вас интересный проект? Напишите мне
+                            div.form_section.col-sm-12
+                                div.form_wrapper
+                                    form(method='POST' name='sentMessage' id='contactForm' action='')
+                                        div.status_message_box
+                                        div.col-sm-6.input_box.form_gr
+                                            label(for='name') Имя
+                                            input(type='text' id='name' name='name' placeholder='Name' ).input_theme
+                                        div.col-sm-6.input_box.form_gr
+                                            label(for='email2') Email
+                                            input(type='email' id='email' name='email' placeholder='Email' ).input_theme
+                                        div.col-sm-12
+                                            div.message_box.form_gr
+                                                label(for='message') Сообщение
+                                                textarea(id='message' rows='13' cols='60' name='message' placeholder='message' ).textarea
+                                        div.captcha_section.col-sm-12
+                                            span.captcha_code Введите код, указанный на картинке
+                                        div.col-xs-6
+                                            div.captcha_image_box
+                                                img(src='img/captcha.jpg')
+                                        div.col-xs-6
+                                            div.captcha_input_box.form_gr
+                                                //label(for='captcha') Captcha
+                                                input(type='text' id='captcha' name='captcha' ).input_theme.input_captcha.input_box
+                                        div.col-sm-12
+                                            div.col-xs-6.button_box
+                                                button(type='submit').btn_default Отправить
+                                            div.col-xs-6.button_box
+                                                button(type='reset').btn_disable Очистить

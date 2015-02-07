@@ -245,12 +245,13 @@ border-radius: 5px;
 }
 
 //CONTENT STYLES
+.contact_bar_li {
+  color: #f3f3f3;
+  &:hover {
+    text-decoration: underline !important;
 
-.collapsed {
-  top: 0 !important;
-  transition: top 0.5s ease;
+  }
 }
-
 
 .left_side_bar {
   border-radius: 5px;
@@ -357,6 +358,7 @@ border-radius: 5px;
   line-height: 20px;
   color: #fff !important;
   margin-right: 8px;
+  margin-bottom: 5px;
   border-radius: 2px;
   background: #7db9e8; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -770,14 +772,6 @@ border-radius: 5px;
   }
 }
 
-
-.tooltip-inner {
-  background-color: #ff4943;
-
-}
-.tooltip-arrow {
-  border-bottom-color: #FF4943 !important;
-}
 //events
 .has-succes {
   border: 1px solid green !important;
@@ -799,15 +793,27 @@ border-radius: 5px;
 .status_message_box {
   margin-bottom: 5px;
   text-align: center;
-  min-height: 35px;
-  padding: 10px 0 0 0;
+  height: auto;
   font-size: 18px;
   font-family: fira_sansbook;
   color: #f3f3f3;
   border-radius: 5px;
 }
+.mail_sent {
+  color: rgba(32, 180, 72, 0.51);
+}
 
-.test {
-  border-radius: 3px;
+.mail_sent_error {
+  color: rgba(255, 73, 67, 0.51);
+}
+
+.tooltip-inner {
+  background-color: #ff4943;
+}
+.tooltip.left .tooltip-arrow{
+  border-left-color: #ff0000;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #ff0000;
 }
 @import "../tools/modal";

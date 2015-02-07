@@ -80,9 +80,13 @@
     display: inline-block;
     float: none;
   }
+  .collapsed {
+    top: 115px;
+    transition: top 0.5s ease;
+  }
 }
 
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
   .about_me, .job, .studies_level{
     font-size: 17px !important;
     line-height: 22px;
@@ -152,6 +156,10 @@
   .icon-menu {
     font-size: 40px;
     line-height: 60px;
+  }
+  .collapsed {
+    top: 65px;
+    transition: top 0.5s ease;
   }
 }
 

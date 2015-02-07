@@ -7,8 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="John Manoil">
     <title>Ivan Manoil</title>
+    <!-- build:css css/style.css-->
     <link rel="stylesheet" href="css/framework/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <!--endbuild-->
   </head>
   <body>
     <div class="wrapper">
@@ -42,33 +44,21 @@
               <div class="container-fluid contact_bar">
                 <div class="row">
                   <div class="contact_bar container-fluid">
-                    <div class="row">
+                    <ul class="row">
                       <div class="social_bar_head">Контакты</div>
-                      <div class="col-sm-12 contact_tel">
-                        <div class="row">
-                          <div class="icon_tel col-xs-2"><i class="icon-phone"></i></div>
-                          <div class="col-xs-10">
-                            <p>+37379868007</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-12 contact_mail">
-                        <div class="row">
-                          <div class="icon_mail col-xs-2"><i class="icon-mail"></i></div>
-                          <div class="col-xs-10">
-                            <p>ionmnl@gmail.com</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-12 contact_skype">
-                        <div class="row">
-                          <div class="icon_skype col-xs-2"><i class="icon-skype"></i></div>
-                          <div class="col-xs-10">
-                            <p>ionmnl</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      <li class="col-sm-12 contact_tel">
+                        <div class="icon_tel col-xs-2"><i class="icon-phone"></i></div>
+                        <div class="col-xs-10"><a href="tel:+37379868007" class="contact_bar_li">+37379868007</a></div>
+                      </li>
+                      <li class="col-sm-12 contact_mail">
+                        <div class="icon_mail col-xs-2"><i class="icon-mail"></i></div>
+                        <div class="col-xs-10"><a href="mailto:ionmnl@gmail.com" class="contact_bar_li">ionmnl@gmail.com</a></div>
+                      </li>
+                      <li class="col-sm-12 contact_skype">
+                        <div class="icon_skype col-xs-2"><i class="icon-skype"></i></div>
+                        <div class="col-xs-10"><a href="skype:ionmnl" class="contact_bar_li">ionmnl</a></div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -81,10 +71,12 @@
                 <div class="col-sm-12">
                   <div class="profile_img_box col-sm-4"><img src="img/me2.jpg" alt="profile" class="profile_img"></div>
                   <div class="about_me col-sm-8">
-                    <p class="about_info"><strong> Меня зовут:</strong><span class="about_info_span">Ivan Manoil.</span></p>
-                    <p class="about_info"><strong>Мой возраст:</strong><span class="about_info_span">23 лет.</span></p>
-                    <p class="about_info"><strong>Мой город:</strong><span class="about_info_span">Chisinau, MD.</span></p>
-                    <p class="about_info"><strong>Моя специализация:</strong><span class="about_info_span">FRONTEND разработчик.</span></p>
+                    <ul class="about_me_ul">
+                      <li class="li"><strong> Меня зовут :</strong> Ivan Manoil.</li>
+                      <li class="li"><strong>Мой возраст :</strong> 23 лет.</li>
+                      <li class="li"><strong>Мой город :<strong> Chisinau, MD.</li>
+                      <li class="li"><strong>Моя специализация :</strong> FRONTEND разработчик.</li>
+                    </ul>
                     <ul class="skill_list"><strong>Ключевые навыки:</strong>
                       <li class="skill">html</li>
                       <li class="skill">css</li>
@@ -149,14 +141,15 @@
     </div>
     <div id="footer" class="container-fluid">
       <div class="row">
-        <div class="col-sm-12"><span>© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</span></div>
+        <div class="col-sm-12"><span>© 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его</span></div>
       </div>
     </div>
     <!--javascript-->
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js">')</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+    <!-- build:js js/core.js-->
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <!--endbuild-->
   </body>
 </html>

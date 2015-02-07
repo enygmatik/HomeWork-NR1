@@ -1,5 +1,5 @@
 <div id="header">
-    <div class="brand-logo col-xs-4"><a href="index" class="logo">LoftSchool</a>
+    <div class="brand-logo col-xs-4"><a href="/" class="logo">LoftSchool</a>
         <div class="logo_text">комплексное обучение web разработке</div>
     </div>
     <div class="social col-xs-5">
