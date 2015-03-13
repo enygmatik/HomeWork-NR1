@@ -67,7 +67,7 @@
     -webkit-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
     box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
-    z-index: 99;
+    z-index: 9;
   }
   .menu_btn{
     position: absolute;
@@ -123,6 +123,19 @@
   }
   .input_theme {
     width: 100% !important;
+  }
+  .form_wrapper-admin{
+    position: relative;
+    padding: 20px;
+  }
+  .form_body{
+    padding: 20px;
+  }
+  .form_admin{
+    width: 100%;
+  }
+  .input_theme-admin{
+    width: 90%;
   }
 }
 

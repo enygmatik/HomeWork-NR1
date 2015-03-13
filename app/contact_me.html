@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/framework/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!--endbuild-->
+      <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
   </head>
   <body>
     <div class="wrapper">
@@ -75,7 +76,7 @@
                           <input type="text" id="name" name="name" placeholder="Name" class="input_theme">
                         </div>
                         <div class="col-sm-6 input_box form_gr">
-                          <label for="email2">Email</label>
+                          <label for="email">Email</label>
                           <input type="email" id="email" name="email" placeholder="Email" class="input_theme">
                         </div>
                         <div class="col-sm-12">
@@ -86,12 +87,13 @@
                         </div>
                         <div class="captcha_section col-sm-12"><span class="captcha_code">Введите код, указанный на картинке</span></div>
                         <div class="col-xs-6">
-                          <div class="captcha_image_box"><img src="img/captcha.jpg"></div>
+                          <div class="captcha_image_box"><img src="captcha.php"></div>
                         </div>
                         <div class="col-xs-6">
                           <div class="captcha_input_box form_gr">
                             <!--label(for='captcha') Captcha-->
                             <input type="text" id="captcha" name="captcha" class="input_theme input_captcha input_box">
+                              <!--<div class="g-recaptcha" data-sitekey="6LemzgATAAAAAFaKIKcFdxQ7gQCQc80_QgZYh0im"></div>-->
                           </div>
                         </div>
                         <div class="col-sm-12">
@@ -114,7 +116,7 @@
     </div>
     <div id="footer" class="container-fluid">
       <div class="row">
-        <div class="col-sm-12"><span>© 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его</span></div>
+        <div class="col-sm-12"><a href="admin.html" class="login"><img src="img/lock.png" alt=""></a><span class="cc">© 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его</span></div>
       </div>
     </div>
     <!--javascript-->

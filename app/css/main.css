@@ -97,7 +97,8 @@ section {
   min-height: 115px;
   height: 115px;
   width: 100%;
-  background-color: #eff3f7; }
+  background-color: #eff3f7;
+  z-index: 99; }
   #header:after {
     content: '';
     display: block;
@@ -264,7 +265,8 @@ section {
   font-weight: 300;
   color: #3BA8C0;
   line-height: 32px;
-  text-align: center; }
+  text-align: left;
+  padding-left: 10px; }
 
 .box {
   float: right;
@@ -440,8 +442,7 @@ section {
   color: #65707b;
   text-align: center;
   font-size: 13px;
-  font-family: fira_sanslight;
-  line-height: 55px; }
+  font-family: fira_sanslight; }
   #footer:before {
     content: '';
     display: block;
@@ -576,7 +577,7 @@ section {
 
 .form_header {
   position: relative;
-  margin-bottom: 65px;
+  margin-bottom: 20px;
   height: 120px;
   border-bottom: 21px solid #67DFFA;
   border-radius: 4px 4px 0 0;
@@ -650,7 +651,7 @@ section {
   margin-top: 55px;
   margin-bottom: 55px; }
 
-.btn_default {
+.btn_default, .login_btn {
   position: relative;
   color: #fff;
   top: 0;
@@ -666,9 +667,10 @@ section {
   -webkit-box-shadow: 0px 3px 0px #3595ab;
   -moz-box-shadow: 0px 3px 0px #3595ab;
   box-shadow: 0px 3px 0px #3595ab; }
-  .btn_default:hover {
+  .btn_default:hover, .login_btn:hover {
+    cursor: pointer;
     box-shadow: none; }
-  .btn_default:active {
+  .btn_default:active, .login_btn:active {
     top: 2px;
     box-shadow: 0px -3px 0px #3595ab; }
 
@@ -710,7 +712,7 @@ section {
     color: #f3f3f3; }
 
 .status_message_box {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-align: center;
   height: auto;
   font-size: 18px;
@@ -719,10 +721,16 @@ section {
   border-radius: 5px; }
 
 .mail_sent {
-  color: rgba(32, 180, 72, 0.51); }
+  background-color: rgba(32, 180, 72, 0.51);
+  height: 30px;
+  border-radius: 5px;
+  padding: 6px; }
 
 .mail_sent_error {
-  color: rgba(255, 73, 67, 0.51); }
+  background-color: rgba(255, 73, 67, 0.51);
+  height: 30px;
+  border-radius: 5px;
+  padding: 6px; }
 
 .tooltip-inner {
   background-color: #ff4943; }
@@ -732,6 +740,84 @@ section {
 
 .tooltip.bottom .tooltip-arrow {
   border-bottom-color: #ff0000; }
+
+.form_wrapper-admin {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.form_wrapper-admin:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.form_admin {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #eff3f7;
+  width: 590px;
+  height: 484px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6.86px 0.14px rgba(13, 16, 7, 0.29); }
+
+.form_head {
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+  height: 107px;
+  font-size: 40px;
+  color: #fff;
+  font-family: fira_sanslight;
+  background-color: #48cbe8;
+  border-bottom: 10px solid #0b97c4; }
+
+.form_body {
+  padding-top: 30px; }
+
+.form_footer {
+  padding-top: 20px; }
+
+.input_label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #959aa8;
+  font-size: 36px;
+  font-family: fira_sanslight; }
+
+.input_theme-admin {
+  padding-left: 10px;
+  width: 425px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 5px;
+  color: #00b3ee;
+  border: 1px solid #00b3ee;
+  margin-bottom: 20px; }
+
+.input_theme-admin::-webkit-input-placeholder {
+  font-size: 20px;
+  font-family: fira_sanslight; }
+
+.login_btn {
+  font-size: 20px;
+  width: 220px;
+  height: 55px; }
+
+.login {
+  position: absolute;
+  left: 100px;
+  top: 10px; }
+
+.cc {
+  position: relative;
+  margin-top: 20px;
+  display: block; }
 
 .modal-dialog {
   max-width: 420px;
@@ -1004,7 +1090,7 @@ section {
     -webkit-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
     box-shadow: 0 3px 6px 0 rgba(50, 50, 50, 0.75);
-    z-index: 99; }
+    z-index: 9; }
 
   .menu_btn {
     position: absolute;
@@ -1051,7 +1137,20 @@ section {
       margin-top: 30px; }
 
   .input_theme {
-    width: 100% !important; } }
+    width: 100% !important; }
+
+  .form_wrapper-admin {
+    position: relative;
+    padding: 20px; }
+
+  .form_body {
+    padding: 20px; }
+
+  .form_admin {
+    width: 100%; }
+
+  .input_theme-admin {
+    width: 90%; } }
 @media (max-width: 668px) {
   .brand-logo {
     padding: 15px;
@@ -1091,7 +1190,7 @@ section {
       height: 100%;
       padding-top: 10px; }
 
-  .btn_default, .btn_disable {
+  .btn_default, .login_btn, .btn_disable {
     width: 100%;
     font-size: 13px; }
 

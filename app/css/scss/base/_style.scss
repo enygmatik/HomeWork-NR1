@@ -85,6 +85,7 @@ section {
   height: 115px;
   width: 100%;
   background-color: $base_color;
+  z-index: 99;
   &:after {
     content: '';
     display: block;
@@ -279,7 +280,8 @@ border-radius: 5px;
   font-weight: 300;
   color: #3BA8C0;
   line-height: 32px;
-  text-align: center;
+  text-align: left;
+  padding-left:10px;
 }
 
 .box {
@@ -473,7 +475,7 @@ border-radius: 5px;
   text-align: center;
   font-size: 13px;
   font-family: fira_sanslight;
-  line-height: 55px;
+
   &:before {
     content: '';
     display: block;
@@ -630,7 +632,7 @@ border-radius: 5px;
 }
 .form_header {
   position: relative;
-  margin-bottom: 65px;
+  margin-bottom: 20px;
   height: 120px;
   border-bottom: 21px solid #67DFFA;
   border-radius: 4px 4px 0 0;
@@ -736,6 +738,7 @@ border-radius: 5px;
   -moz-box-shadow: 0px 3px 0px $box_shadow;
   box-shadow: 0px 3px 0px $box_shadow;
   &:hover {
+    cursor: pointer;
     box-shadow: none;
   }
   &:active {
@@ -791,7 +794,7 @@ border-radius: 5px;
 }
 
 .status_message_box {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-align: center;
   height: auto;
   font-size: 18px;
@@ -800,11 +803,17 @@ border-radius: 5px;
   border-radius: 5px;
 }
 .mail_sent {
-  color: rgba(32, 180, 72, 0.51);
+  background-color: rgba(32, 180, 72, 0.51);
+  height: 30px;
+  border-radius: 5px;
+  padding: 6px;
 }
 
 .mail_sent_error {
-  color: rgba(255, 73, 67, 0.51);
+  background-color: rgba(255, 73, 67, 0.51);
+  height: 30px;
+  border-radius: 5px;
+  padding: 6px;
 }
 
 .tooltip-inner {
@@ -816,4 +825,98 @@ border-radius: 5px;
 .tooltip.bottom .tooltip-arrow {
   border-bottom-color: #ff0000;
 }
+
+.form_wrapper-admin {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.form_wrapper-admin:before{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.form_admin{
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #eff3f7;
+  width: 590px;
+  height: 484px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6.86px 0.14px rgba(13, 16, 7, 0.29);
+}
+
+.form_head{
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+  height: 107px;
+  font-size: 40px;
+  color: #fff;
+  font-family: fira_sanslight;
+  background-color: #48cbe8;
+  border-bottom: 10px solid #0b97c4;
+}
+
+.form_body {
+//  display: inline-block;
+  padding-top: 30px;
+}
+
+.form_footer{
+  padding-top: 20px;
+}
+
+.input_label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #959aa8;
+  font-size: 36px;
+  font-family: fira_sanslight;
+}
+
+.input_theme-admin{
+  padding-left: 10px;
+  width: 425px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 5px;
+  color: #00b3ee;
+  border: 1px solid #00b3ee;
+  margin-bottom: 20px;
+}
+.input_theme-admin::-webkit-input-placeholder{
+  font-size: 20px;
+  font-family: fira_sanslight;
+}
+
+.login_btn {
+  @extend .btn_default;
+  font-size: 20px;
+  width: 220px;
+  height: 55px;
+}
+
+.login{
+  position: absolute;
+  left: 100px;
+  top: 10px;
+}
+
+.cc{
+  position: relative;
+  margin-top: 20px;
+  display: block;
+}
+
+
 @import "../tools/modal";
+
